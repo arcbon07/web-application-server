@@ -15,16 +15,25 @@
 * 각 요구사항을 구현하는 것이 중요한 것이 아니라 구현 과정을 통해 학습한 내용을 인식하는 것이 배움에 중요하다. 
 
 ### 요구사항 1 - http://localhost:8080/index.html로 접속시 응답
-* 
+* in, out  InputSream -> InputStreamReader -> BufferedReader
+* byte[] body Files.readAllBytes(new File("./webapp" + url).toPath())
+* DataOutputStream
+* response200Header, responseBody
 
 ### 요구사항 2 - get 방식으로 회원가입
-* 
+* parseQueryString
+* get은 주소줄에 값이 ?뒤에 쌍으로 이어붙는다.
+* get은 url에 정보를 이어 붙이기 때문에 길이제한이 있어서 많은 양의 데이터는 보내기 어렵다.
+* get은 select적인 성향을 가지고 잇어 어떤 데이터를 가져올지 선택하는 데 유용하다.
 
 ### 요구사항 3 - post 방식으로 회원가입
-* 
+* post는 data가 숨겨져서 body안에 보내진다.
+* 만은 양의 데이터를 보낼 수 있다.
+* form을 이용하여 method를 post 지정하여 사용한다.
+* post는 서버의 값이나 상태를 바꾸기 위해서 사용한다.
 
 ### 요구사항 4 - redirect 방식으로 이동
-* 
+* 302 방식은 client에게 url을 전달한다. client는 전달받은 url로 다시 server에 요청한다.
 
 ### 요구사항 5 - cookie
 * 
